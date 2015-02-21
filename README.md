@@ -1,22 +1,47 @@
-# react-tabs
+# react-tabs-ui
 
-react-tabs is a simple tabs box autocomplete component using react.js.
+react-tabs-ui is a simple tabs component using react.js.
 
 ![](example/screenshot.png)
 
 ## Installation
 
-`npm install react-tabs --save`
+`npm install react-tabs-ui --save`
 
 ## Usage
 
 ```javascript
 var React = require('react');
-var tabs = require('react-tabs');
+var tabs = require('react-tabs-ui'),
+    Tabs = tabs.Tabs,
+    Tab = tabs.Tab,
+    HEADERS = ['heading 1', 'heading 2', 'heading 3'];
 
-var ITEMS = ['ruby', 'javascript', 'lua', 'go', 'c++', 'julia', 'java', 'c', 'scala','haskell']
+var TabExample = React.createClass({
+  render: function() {
+    return (
+    	<Tabs headers={HEADERS}>
+    		<Tab>
+    			<h3>content 1</h3>
+    			<p>This is the first tab</p>
+    		</Tab>
+    		<Tab>
+    			<h3>content 2</h3>
+    			<p>This is the second tab</p>
+    		</Tab>
+    		<Tab>
+    			<h3>content 3</h3>
+    			<p>This is the third tab</p>
+    		</Tab>
+    	</Tabs>
+    );
+  }
+});
 
-React.renderComponent(<tabs items={ITEMS} />, document.getElementById("container"));
+React.render(
+  <TabExample />,
+  document.getElementById('container')
+);
 
 ```
 
