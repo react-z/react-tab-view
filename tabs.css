@@ -9,3 +9,10 @@
 .react-tabs .hidden {
   display: none;  
 }
+
+.react-tab {
+  background: rgb(250, 250, 250);
+  margin: 1em auto;
+  border: 1px solid #ddd;
+  padding: 1em;
+}

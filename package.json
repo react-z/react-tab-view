@@ -1,7 +1,7 @@
 {
-  "name": "react-tabs",
+  "name": "react-ui-tabs",
   "version": "0.0.1",
-  "description": "a simple tabs box component",
+  "description": "a simple tabs component",
   "main": "js/tabs.js",
   "repository": {
     "type": "git",

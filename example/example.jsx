@@ -9,9 +9,27 @@ var TabExample = React.createClass({
   render: function() {
     return (
     	<Tabs headers={HEADERS}>
-    		<Tab><span>content 1</span></Tab>
-    		<Tab><span>content 2</span></Tab>
-    		<Tab><span>content 3</span></Tab>
+    		<Tab>
+    			<h3>content 1</h3>
+    			<p>
+    			This is the first tab, Lorem ipsum dolor sit amet, te sit vocent voluptua sapientem, nam graeco epicuri eu. 
+    			Quem corpora pro cu, quo id zril mentitum similique. Sea no malis suavitate
+    			</p>
+    		</Tab>
+    		<Tab>
+    			<h3>content 2</h3>
+    			<p>
+    			This is the second tab, Lorem ipsum dolor sit amet, te sit vocent voluptua sapientem, nam graeco epicuri eu. 
+    			Quem corpora pro cu, quo id zril mentitum similique. Sea no malis suavitate
+    			</p>
+    		</Tab>
+    		<Tab>
+    			<h3>content 3</h3>
+    			<p>
+    			This is the third tab, Lorem ipsum dolor sit amet, te sit vocent voluptua sapientem, nam graeco epicuri eu. 
+    			Quem corpora pro cu, quo id zril mentitum similique. Sea no malis suavitate
+    			</p>
+    		</Tab>
     	</Tabs>
     );
   }

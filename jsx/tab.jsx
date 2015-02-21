@@ -20,7 +20,7 @@ var Tab = React.createClass({
   render: function(){
 
     return (
-      <div className="react-tab">
+      <div className="react-tab hidden">
         {this.props.children}
       </div>
     );
