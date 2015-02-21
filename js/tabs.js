@@ -1,7 +1,6 @@
 /** @jsx React.DOM */
 
 var React = require('react');
-var Tab = require('../jsx/tab.jsx');
 
 /**
  * Tabs module
@@ -30,7 +29,6 @@ var Tabs = React.createClass({displayName: "Tabs",
 
     var list = e.target.parentElement.parentElement.children;
     this.setActiveTabHeader(list,id);
-
   },
   /** 
    * Set the active tab by id 
@@ -67,7 +65,6 @@ var Tabs = React.createClass({displayName: "Tabs",
       );
     }.bind(this));
 
-
     return (
       React.createElement("div", {className: "react-tabs"}, 
 
@@ -87,6 +84,7 @@ var Tabs = React.createClass({displayName: "Tabs",
       )
     );
   }
+
 });
 
 module.exports = Tabs;

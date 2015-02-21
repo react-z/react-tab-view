@@ -1,26 +1,26 @@
-# react-tabs-ui
+# react-ui-tabs
 
-react-tabs-ui is a simple tabs component using react.js.
+react-ui-tabs is a simple tabs component using react.js.
 
 ![](example/screenshot.png)
 
 ## Installation
 
-`npm install react-tabs-ui --save`
+`npm install react-ui-tabs --save`
 
 ## Usage
 
 ```javascript
 var React = require('react');
-var tabs = require('react-tabs-ui'),
+var tabs = require('react-ui-tabs'),
     Tabs = tabs.Tabs,
     Tab = tabs.Tab,
-    HEADERS = ['heading 1', 'heading 2', 'heading 3'];
+    headers = ['heading 1', 'heading 2', 'heading 3'];
 
 var TabExample = React.createClass({
   render: function() {
     return (
-    	<Tabs headers={HEADERS}>
+    	<Tabs headers={headers}>
     		<Tab>
     			<h3>content 1</h3>
     			<p>This is the first tab</p>

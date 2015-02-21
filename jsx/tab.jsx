@@ -10,7 +10,6 @@ var React = require('react');
 var Tab = React.createClass({
   getInitialState: function(){
      return {
-       items:  this.props.items
      }
   },
   componentDidMount: function() {
