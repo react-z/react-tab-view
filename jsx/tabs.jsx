@@ -67,7 +67,6 @@ var Tabs = React.createClass({
 
     return (
       <div className="react-tabs">
-
         <div className="pure-menu pure-menu-open pure-menu-horizontal">
             <ul>
                 {headers}
@@ -75,12 +74,10 @@ var Tabs = React.createClass({
         </div>
         
         <div className="pure-g">
-
             <div className="pure-u-1-1" ref="tabs">
               {this.props.children}                           
             </div>
         </div>
-
       </div>
     );
   }
