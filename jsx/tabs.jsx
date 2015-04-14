@@ -16,7 +16,7 @@ var Tabs = React.createClass({
   componentDidMount: function() {
     // set 1st tab and tab header as active
     var tabs = this.refs.tabs.getDOMNode().children[0].className = "react-tab";
-    this.refs['list0'].getDOMNode().className = "pure-menu-selected";
+    this.refs['list0'].getDOMNode().className = "selected";
   },
   componentWillUnmount: function() {
   },  
@@ -48,16 +48,16 @@ var Tabs = React.createClass({
   setActiveTabHeader: function (list, id) {
     // set all headings as deselected
     for(var i = 0; i < list.length; i++){
-      list[i].className = "pure-menu";
+      list[i].className = "";
     }
     // set selected heading as selected
-    list[id].className = "pure-menu-selected";    
+    list[id].className = "selected";    
   },
   render: function(){
 
     var headers = this.state.headers.map(function (h, i) {
       return (
-        <li ref={'list' + i} className="pure-menu">
+        <li ref={'list' + i}>
           <a data-tab-id={i} onClick={this.changeTab}>
             {h}
           </a>
@@ -67,16 +67,14 @@ var Tabs = React.createClass({
 
     return (
       <div className="react-tabs">
-        <div className="pure-menu pure-menu-open pure-menu-horizontal">
+        <div className="menu">
             <ul>
                 {headers}
             </ul>
         </div>
         
-        <div className="pure-g">
-            <div className="pure-u-1-1" ref="tabs">
+        <div className="tab-content" ref="tabs">
               {this.props.children}                           
-            </div>
         </div>
       </div>
     );

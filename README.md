@@ -47,9 +47,7 @@ React.render(
 
 ## Styles
 
-All React UI components are made to be compatible with [pure CSS](http://purecss.io/) which gives some nice responsive styles. 
-
-The components can also be used with your own custom style sheets. A minimal tabs.css style sheet is included as a guide.
+react-tab-view can be used with your own custom styles. A minimal tabs.css style sheet is included as a guide.
 
 ## Development
 
