@@ -25,31 +25,31 @@
   display: none;
 }
 
-.menu ul{
+.react-tabs ul{
   margin: 0;
   padding: 0;
   list-style-type: none;
   text-align: center;
 }
 
-.menu ul li {
+.react-tabs ul li {
   display: inline;
 }
 
-.menu a {
+.react-tabs a {
   text-decoration: none;
   padding: .5em;
   color: #fff;
   background-color: #ddd;
 }
 
-.menu .selected a {
+.react-tabs .selected a {
   background-color: #b7b7b7 !important;
   color: #fff !important;
   font-weight: bold;
 }
 
-.menu a:hover {
+.react-tabs a:hover {
   color: #fff;
   background-color: #b7b7b7;
 }
