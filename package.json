@@ -1,6 +1,6 @@
 {
   "name": "react-tab-view",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a simple tabs component",
   "main": "js/main.js",
   "repository": {
