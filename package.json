@@ -2,7 +2,7 @@
   "name": "react-tab-view",
   "version": "0.0.6",
   "description": "a simple tab component",
-  "main": "lib/react-tab.js",
+  "main": "lib/main.js",
   "author": "Steven Iseki <stevenisekimartin@gmail.com>",
   "repository": {
     "type": "git",

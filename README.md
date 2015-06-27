@@ -11,7 +11,7 @@ react-tab-view is a simple tabs component using react.js.
 ```javascript
 
 import React from 'react'
-import tabs from '../lib/main'
+import tabs from 'react-tab-view'
 
 let Tabs = tabs.Tabs,
     Tab = tabs.Tab,
