@@ -1,21 +1,17 @@
-/** @jsx React.DOM */
-
-var React = require('react');
+import React from 'react'
 
 /**
  * Tabs module
  * A simple tab component.
 **/
 
-var Tabs = React.createClass({
+let Tabs = React.createClass({displayName: "Tabs",
   getInitialState: function(){
-     return {
-       headers: this.props.headers
-     }
+     return { }
   },
   componentDidMount: function() {
     // set 1st tab and tab header as active
-    var tabs = this.refs.tabs.getDOMNode().children[0].className = "react-tab";
+    let tabs = this.refs.tabs.getDOMNode().children[0].className = "react-tab";
     this.refs['list0'].getDOMNode().className = "selected";
   },
   componentWillUnmount: function() {
@@ -24,10 +20,10 @@ var Tabs = React.createClass({
    * Tab has changed 
   **/
   changeTab: function (e) {
-    var id = e.target.getAttribute('data-tab-id');
+    let id = e.target.getAttribute('data-tab-id');
     this.setActiveTab(id);
 
-    var list = e.target.parentElement.parentElement.children;
+    let list = e.target.parentElement.parentElement.children;
     this.setActiveTabHeader(list,id);
   },
   /** 
@@ -35,8 +31,8 @@ var Tabs = React.createClass({
   **/
   setActiveTab: function (id) {
     // hide all tab content    
-    var tabs = this.refs.tabs.getDOMNode().children;
-    for(var i = 0; i < tabs.length; i++){
+    let tabs = this.refs.tabs.getDOMNode().children;
+    for(let i = 0; i < tabs.length; i++){
       tabs[i].className = "react-tab hidden";
     }
     // set selected tab content as visible
@@ -47,7 +43,7 @@ var Tabs = React.createClass({
   **/  
   setActiveTabHeader: function (list, id) {
     // set all headings as deselected
-    for(var i = 0; i < list.length; i++){
+    for(let i = 0; i < list.length; i++){
       list[i].className = "";
     }
     // set selected heading as selected
@@ -55,28 +51,28 @@ var Tabs = React.createClass({
   },
   render: function(){
 
-    var headers = this.state.headers.map(function (h, i) {
+    let headers = this.props.headers.map(function (h, i) {
       return (
-        <li ref={'list' + i}>
-          <a data-tab-id={i} onClick={this.changeTab}>
-            {h}
-          </a>
-        </li>
+        React.createElement("li", {ref: 'list' + i}, 
+          React.createElement("a", {"data-tab-id": i, onClick: this.changeTab}, 
+            h
+          )
+        )
       );
     }.bind(this));
 
     return (
-      <div className="react-tabs">
-        <div className="menu">
-            <ul>
-                {headers}
-            </ul>
-        </div>
+      React.createElement("div", {className: "react-tabs"}, 
+        React.createElement("div", {className: "menu"}, 
+            React.createElement("ul", null, 
+                headers
+            )
+        ), 
         
-        <div className="tab-content" ref="tabs">
-              {this.props.children}                           
-        </div>
-      </div>
+        React.createElement("div", {className: "tab-content", ref: "tabs"}, 
+              this.props.children
+        )
+      )
     );
   }
 

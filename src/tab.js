@@ -1,23 +1,15 @@
-/** @jsx React.DOM */
-
-var React = require('react');
+import React from 'react'
 
 /**
  * Tab module
  * A simple tab component.
 **/
 
-var Tab = React.createClass({displayName: "Tab",
+let Tab = React.createClass({displayName: "Tab",
   getInitialState: function(){
-     return {
-     }
+     return {}
   },
-  componentDidMount: function() {
-  },
-  componentWillUnmount: function() {
-  },  
   render: function(){
-
     return (
       React.createElement("div", {className: "react-tab hidden"}, 
         this.props.children
