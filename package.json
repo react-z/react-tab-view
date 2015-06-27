@@ -1,6 +1,6 @@
 {
   "name": "react-tab-view",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "a simple tab component",
   "main": "lib/react-tab.js",
   "author": "Steven Iseki <stevenisekimartin@gmail.com>",
