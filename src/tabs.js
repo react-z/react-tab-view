@@ -53,7 +53,7 @@ let Tabs = React.createClass({displayName: "Tabs",
 
     let headers = this.props.headers.map(function (h, i) {
       return (
-        React.createElement("li", {ref: 'list' + i}, 
+        React.createElement("li", {ref: 'list' + i, key: i}, 
           React.createElement("a", {"data-tab-id": i, onClick: this.changeTab}, 
             h
           )
