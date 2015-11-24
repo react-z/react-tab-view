@@ -52,7 +52,7 @@ ReactDOM.render(
 
 ## Styles
 
-react-tab-view can be used with your own custom styles. A minimal tabs.css style sheet is included as a guide.
+react-tab-view can be used with your own custom styles. A minimal [tabs.css](https://github.com/StevenIseki/react-tab-view/blob/master/example/public/tabs.css) style sheet is included as a guide.
 
 ## Development
     
