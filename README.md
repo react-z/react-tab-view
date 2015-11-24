@@ -1,46 +1,56 @@
 # react-tab-view
 
+[![npm version](https://badge.fury.io/js/react-tab-view.svg)](https://badge.fury.io/js/react-tab-view)
+
 react-tab-view is a simple tabs component using react.js.
 
-## Installation
+## Install
 
 `npm install react-tab-view --save`
 
 ## Usage
 
-```javascript
+```jsx
 
-import React from 'react'
-import tabs from 'react-tab-view'
+import { Tabs, Tab } from 'react-tab-view'
+import ReactDOM from 'react-dom'
+import React, { Component, PropTypes } from 'react'
 
-let Tabs = tabs.Tabs,
-    Tab = tabs.Tab,
-    headers = ['heading 1', 'heading 2', 'heading 3'];
+class TestComponent extends Component {
 
-let TabExample = React.createClass({
-  render: function() {
+  render () {
+
+    const headers = ['heading 1', 'heading 2'];
+
     return (
-      <Tabs headers={headers}>
-        <Tab>
-          <p>This is the first tab</p>
-        </Tab>
-        <Tab>
-          <p>This is the second tab</p>
-        </Tab>
-        <Tab>
-          <p>This is the third tab</p>
-        </Tab>
-      </Tabs>
-    );
+      <div>
+        <Tabs headers={headers}>
+          <Tab>
+            <p>This is the first tab's content</p>
+          </Tab>
+          <Tab>
+            <p>This is the second tab's content</p>
+          </Tab>
+        </Tabs>
+      </div>
+    )
   }
-});
+}
 
-React.render(
-  <TabExample />,
-  document.getElementById('container')
-);
+ReactDOM.render(
+  <TestComponent />, 
+  document.getElementById('root')
+)
 
 ```
+
+## Versions
+
+#### `1.0.1` 
+Uses React ^0.13.0
+
+#### `1.0.2` 
+Uses React ^0.14.0
 
 ## Styles
 

@@ -1,21 +1,29 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 
 /**
  * Tab module
  * A simple tab component.
 **/
+class Tab extends Component {
 
-let Tab = React.createClass({displayName: "Tab",
-  getInitialState: function(){
-     return {}
-  },
-  render: function(){
-    return (
-      React.createElement("div", {className: "react-tab hidden"}, 
-        this.props.children
-      )
-    );
+  constructor (props) {
+    super(props)
+    this.state = {}
   }
-});
 
-module.exports = Tab;
+  static get propTypes () {
+    return {
+      children: PropTypes.object.isRequired
+    }
+  }
+
+  render () {
+    return (
+      <div className='react-tab hidden'>
+        {this.props.children}
+      </div>
+      )
+  }
+}
+
+export default Tab
