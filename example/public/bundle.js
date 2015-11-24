@@ -218,7 +218,9 @@
 	    get: function get() {
 	      return {
 	        classPrefix: _react.PropTypes.string,
-	        onChangeTab: _react.PropTypes.func
+	        onChangeTab: _react.PropTypes.func,
+	        children: _react.PropTypes.array.isRequired,
+	        headers: _react.PropTypes.array.isRequired
 	      };
 	    }
 	  }]);
@@ -237,7 +239,7 @@
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      // set 1st tab and tab header as active
-	      var tabs = this.refs.tabs.children[0].className = this.props.classPrefix;
+	      this.refs.tabs.children[0].className = 'react-tab';
 	      this.refs['list0'].className = 'selected';
 	    }
 	  }, {
@@ -256,7 +258,7 @@
 	  }, {
 	    key: 'setActiveTab',
 	    value: function setActiveTab(id) {
-	      // hide all tab content  
+	      // hide all tab content
 	      var tabs = this.refs.tabs.children;
 	      for (var i = 0; i < tabs.length; i++) {
 	        tabs[i].className = 'react-tab hidden';
@@ -278,12 +280,6 @@
 	    key: 'render',
 	    value: function render() {
 	      var _this2 = this;
-
-	      var _props = this.props;
-	      var items = _props.items;
-	      var item = _props.item;
-	      var isFetching = _props.isFetching;
-	      var isSelected = _props.isSelected;
 
 	      var headers = this.props.headers.map(function (h, i) {
 	        return _react2.default.createElement('li', { key: i, ref: 'list' + i }, _react2.default.createElement('a', { 'data-tab-id': i, onClick: _this2.changeTab }, h));

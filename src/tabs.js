@@ -29,6 +29,7 @@ class Tabs extends Component {
 
   componentDidMount () {
     // set 1st tab and tab header as active
+    this.refs.tabs.children[0].className = 'react-tab'
     this.refs['list0'].className = 'selected'
   }
 
