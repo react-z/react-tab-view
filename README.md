@@ -46,11 +46,9 @@ ReactDOM.render(
 
 ## Versions
 
-#### `1.0.1` 
-Uses React ^0.13.0
+#### `1.0.1` uses React `^0.13.0`
 
-#### `1.0.3` 
-Uses React ^0.14.0
+#### `1.0.3` uses React `^0.14.0`
 
 ## Styles
 
