@@ -38,7 +38,7 @@ class TestComponent extends Component {
 }
 
 ReactDOM.render(
-  <TestComponent />, 
+  <TestComponent />,
   document.getElementById('root')
 )
 
@@ -50,12 +50,14 @@ ReactDOM.render(
 
 #### `1.0.3` uses React `^0.14.0`
 
+#### `1.0.4` uses React `^0.15.1`
+
 ## Styles
 
 react-tab-view can be used with your own custom styles. A minimal [tabs.css](https://github.com/StevenIseki/react-tab-view/blob/master/example/public/tabs.css) style sheet is included as a guide.
 
 ## Development
-    
+
     npm install
     npm test
     npm start
