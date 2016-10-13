@@ -13,7 +13,7 @@ class Tab extends Component {
 
   static get propTypes () {
     return {
-      children: PropTypes.object.isRequired
+      children: React.PropTypes.node.isRequired
     }
   }
 

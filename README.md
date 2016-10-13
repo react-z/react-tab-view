@@ -26,7 +26,8 @@ class TestComponent extends Component {
       <div>
         <Tabs headers={headers}>
           <Tab>
-            <p>This is the first tab's content</p>
+            <div><p>This is the first tab</p></div>
+            <div><p>with some content</p></div>
           </Tab>
           <Tab>
             <p>This is the second tab's content</p>

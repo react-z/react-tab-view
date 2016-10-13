@@ -70,13 +70,22 @@
 	var TestComponent = function (_Component) {
 	  _inherits(TestComponent, _Component);
 
-	  function TestComponent() {
+	  function TestComponent(props) {
 	    _classCallCheck(this, TestComponent);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(TestComponent).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(TestComponent).call(this, props));
+
+	    _this.state = { value: 'reactjs' };
+	    return _this;
 	  }
 
 	  _createClass(TestComponent, [{
+	    key: 'handleChange',
+	    value: function handleChange(e) {
+	      this.setState({ value: e });
+	      console.log(e);
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 
@@ -92,9 +101,32 @@
 	            _index.Tab,
 	            null,
 	            _react2.default.createElement(
-	              'p',
+	              'div',
 	              null,
-	              'This is the first tab'
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'This is the first tab'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'with some content'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'This is the first tab'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'with some content'
+	              )
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -159,6 +191,10 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _createClass = function () {
 	  function defineProperties(target, props) {
 	    for (var i = 0; i < props.length; i++) {
@@ -168,10 +204,6 @@
 	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
 	  };
 	}();
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
 
 	var _react = __webpack_require__(3);
 
@@ -4451,6 +4483,10 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _createClass = function () {
 	  function defineProperties(target, props) {
 	    for (var i = 0; i < props.length; i++) {
@@ -4460,10 +4496,6 @@
 	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
 	  };
 	}();
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
 
 	var _react = __webpack_require__(3);
 
