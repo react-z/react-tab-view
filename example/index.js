@@ -1,4 +1,4 @@
-import { Tabs, Tab } from '../src/index' // 'react-tab-view'
+import { Tabs, Tab } from '../lib/index' // 'react-tab-view'
 import ReactDOM from 'react-dom'
 import React, { Component } from 'react'
 

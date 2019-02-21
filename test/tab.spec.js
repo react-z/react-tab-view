@@ -5,11 +5,10 @@ import { shallow, mount } from 'enzyme'
 import Tab from '../src/tab'
 
 test('Visit component', (t) => {
-  const component = shallow(<Tab><span>hey there</span></Tab>)
   const wrapper = mount(<Tab><span>hey there</span></Tab>)
 
   t.equal(
-    component.find('div').text(), 'hey there', 'the tab component has no text'
+    wrapper.find('div').text(), 'hey there', 'the tab component has no text'
   )
 
   t.pass(
