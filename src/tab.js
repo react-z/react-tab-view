@@ -1,29 +1,36 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 /**
  * Tab module
  * A simple tab component.
-**/
+ **/
 class Tab extends Component {
-
-  constructor (props) {
-    super(props)
-    this.state = {}
-  }
-
-  static get propTypes () {
+  static get propTypes() {
     return {
-      children: React.PropTypes.node.isRequired
+      children: PropTypes.node.isRequired
     }
   }
 
-  render () {
+  render() {
     return (
-      <div className='react-tab hidden'>
+      <TabWrapper className="hidden">
         {this.props.children}
-      </div>
-      )
+      </TabWrapper>
+    )
   }
 }
 
 export default Tab
+
+const TabWrapper = styled.div`
+  background: rgb(250, 250, 250);
+  margin: 1em auto;
+  border: 1px solid #ddd;
+  padding: 1em;
+
+  .hidden {
+    display: none;
+  }
+`

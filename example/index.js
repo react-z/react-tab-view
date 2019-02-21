@@ -1,22 +1,15 @@
-import { Tabs, Tab } from '../lib/index' // 'react-tab-view'
+import { Tabs, Tab } from '../src/index' // 'react-tab-view'
 import ReactDOM from 'react-dom'
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 
 class TestComponent extends Component {
+  handleChange(e) {
+    this.setState({ value: e })
+    console.log(e)
+  }
 
-   constructor(props) {
-      super(props)
-      this.state = { value: 'reactjs'}
-    }
-
-    handleChange (e) {
-      this.setState({value: e})
-      console.log(e)
-    }
-
-  render () {
-
-    const headers = ['heading 1', 'heading 2', 'heading 3'];
+  render() {
+    const headers = ['Heading 1', 'Heading 2', 'Heading 3']
 
     return (
       <div>
@@ -42,7 +35,4 @@ class TestComponent extends Component {
   }
 }
 
-ReactDOM.render(
-  <TestComponent />,
-  document.getElementById('root')
-)
+ReactDOM.render(<TestComponent />, document.getElementById('root'))
